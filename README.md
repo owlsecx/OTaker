@@ -18,13 +18,20 @@
 
 ## 📌 Overview
 
-Screenshots · HTML Report · ASN · Wayback · CVE ║
+
+OTaker is a subdomain asset visualizer that turns a list of hosts into a visual intelligence report with screenshots, HTML output, ASN data, Wayback history and CVE hints. It drives a headless Chromium to capture full-page screenshots and enriches each asset with network and historical context. It runs with a bounded worker pool for authorized reconnaissance.
 
 ---
 
 ## ✨ Features
 
-- Authorized visual reconnaissance: subdomain screenshots, ASN, Wayback, HTML reports
+
+- Headless-Chromium full-page screenshots of discovered subdomains/assets
+- Consolidated HTML report with visual asset cards
+- ASN lookup and network context enrichment per host
+- Wayback Machine history and CVE hinting
+- Bounded worker pool (default 4, hard cap 16) with HTTP and page-load timeouts
+- CSV/JSON output and an offline --self-test
 
 ---
 
@@ -37,8 +44,11 @@ Screenshots · HTML Report · ASN · Wayback · CVE ║
 
 ## 🚀 Usage
 
+
 ```bash
 ./OTaker
+./OTaker --self-test
+./OTaker --help
 ```
 
 ---
